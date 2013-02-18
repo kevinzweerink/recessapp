@@ -14,7 +14,7 @@ $(document).ready(function() {
 		text.addClass(selectedcolor);
 	}
 	
-	$("#header-a").mouseout(function() {
+	$("h1#header-a").mouseout(function() {
 	
 		var oldPhrase = randomPhrase;
 		var oldColor = randomColor;
