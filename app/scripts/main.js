@@ -27,8 +27,8 @@ $(document).ready(function() {
 			text.removeClass("yellow");
 			
 			do {
-				randomPhrase = Math.floor(Math.random()*(phrases.length+1));
-				randomColor = Math.floor(Math.random()*(backgrounds.length+1));
+				randomPhrase = Math.floor(Math.random()*(phrases.length));
+				randomColor = Math.floor(Math.random()*(backgrounds.length));
 				if ((oldPhrase != randomPhrase) && (oldColor != randomColor)) {
 					found = false;
 					changestuff(randomPhrase, randomColor);

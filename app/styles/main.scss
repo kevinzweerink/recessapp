@@ -113,6 +113,9 @@ you can use the generic selector below, but it's slower:
 
 /*KZ MAD STYLEZ*/
 
+* {
+	@include box-sizing(border-box);
+}
 
 a {
 	color: inherit;
@@ -242,6 +245,7 @@ header {
 	padding: 2em 0;
 	font-size: 2em;
 	line-height: 1.5;
+	max-width: 960px;
 }
 
 .body {
@@ -273,6 +277,7 @@ header {
 		outline: none;
 		border: none;
 		margin-right: 0;
+		color: $black;
 	}
 	input[type="submit"] {
 		background-color: $green;
@@ -301,6 +306,74 @@ footer {
 		text-align: center;
 		&:hover {
 			color: $green;
+		}
+	}
+}
+
+/*BLOG STYLES*/
+
+.blog-header .inner {
+	border-bottom: 3px solid $black;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+.blog-header {
+	margin-bottom: 0;
+}
+
+.blog .inner {
+	padding-top: 1em;
+}
+.post {
+	overflow: hidden;
+	border-bottom: 3px solid $black;
+	margin-bottom: 1em;
+	padding-bottom: 1em;
+}
+
+.metadata {
+	width: 20%;
+	float: left;
+	font-size: .5em;
+	color: $gray;
+}
+
+.content {
+	width: 75%;
+	float: right;
+	h3 {
+		font-size: 1.5em;
+		display: inline-block;
+		border-bottom: 3px solid $black;
+		padding-bottom: 0;
+		margin-bottom: 1em;
+	}
+	font-size: .65em;
+	p {
+		margin-bottom: 1em;
+	}
+}
+
+@media all and (max-width: 780px){
+
+	.inner {
+		width: 85%;
+	}
+	
+	.content {
+		width: 100%;
+	}
+	
+	.metadata {
+		width: 100%;
+		margin-bottom: 1em;
+	}
+	
+	.homepage {
+		font-size: .75em;
+		input {
+			width: 100%;
 		}
 	}
 }
